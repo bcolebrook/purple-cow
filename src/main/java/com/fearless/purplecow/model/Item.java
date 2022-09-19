@@ -1,8 +1,17 @@
-package com.fearless.purplecow.resources;
+package com.fearless.purplecow.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("item")
 public class Item {
+    @Id
     private int id;
     private String name;
+
+    public Item(){
+        
+    }
 
     public Item(int id, String name) {
         this.id = id;
